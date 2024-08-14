@@ -1,45 +1,105 @@
-import { Text, ScrollView,StyleSheet,Pressable, StyleSheet, TouchableOpacity, View, Image } from "react-native";
-import { Link } from "expo-router";
+// import { Text, ScrollView,Pressable, StyleSheet, TouchableOpacity, View, Image } from "react-native";
+// import { Link } from "expo-router";
 
+
+// export default function Index() {
+//   return (
+//     <View
+//       style={{
+//         flex: 1,
+//         // justifyContent: "center",
+//         alignItems: "center",
+//         backgroundColor: "#E4801E",
+//       }}
+//     >
+//       <div style={{
+//         maxWidth: "auto",
+//         maxHeight: "auto",
+//         margin: 150,
+//       }}>
+//         <Image
+//           style={{
+//             maxWidth: 400,
+//             maxHeight: 300,
+
+//             // borderRadius: 300
+//           }}
+//           source={require('../assets/images/img1.jpg')}
+//         />
+//       </div>
+
+
+//       <Text style={{ fontFamily: "lexend" }}>Edit app/index.tsx to edit this screen.</Text>
+
+//       <link href="/about2" style={style.button} asChild>
+//         <Pressable style={StyleSheet.button}>
+//           <text style={StyleSheet.buttonText}> acesse ai</text>
+
+
+//         </Pressable>
+
+
+//       </link>
+
+//     </View>
+//   );
+// }
+
+
+import React from 'react';
+import { Text, View, Image, Pressable, StyleSheet, Touchable } from 'react-native';
+import { Link } from 'expo-router'; // Se você está usando expo-router
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        // justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#E4801E",
-      }}
-    >
-      <div style={{
-        maxWidth: "auto",
-        maxHeight: "auto",
-        margin: 150,
-      }}>
+    <View style={styles.container}>
+      <View style={styles.imageContainer}>
         <Image
-          style={{
-            maxWidth: 400,
-            maxHeight: 300,
-
-            // borderRadius: 300
-          }}
+          style={styles.image}
           source={require('../assets/images/img1.jpg')}
         />
-      </div>
+      </View>
 
+      <Text style={styles.text}>Edit app/index.tsx to edit this screen.</Text>
 
-      <Text style={{ fontFamily: "lexend" }}>Edit app/index.tsx to edit this screen.</Text>
-      <link href="/about2" style={style.button} asChild>
-        <Pressable style={StyleSheet.button}>
-          <text style={StyleSheet.buttonText}> acesse ai</text>
-
-
+      {/* <Link href="/about2" style={styles.buttonone} asChild>
+        <Pressable style={styles.button}>
+          <Text style={styles.buttonOneText}>acesse ai</Text>
         </Pressable>
-
-
-      </link>
-
+      </Link>
+    </View> */}
+  {/* );
+} */}
+<Link href="/about2" style={styles.buttonone} asChild>
+        <TouchableOpacity>
+          <Text style={styles.buttonOneText}>about2</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#E4801E',
+  },
+  imageContainer: {
+    margin: 150,
+  },
+  image: {
+    width: 400,
+    height: 300,
+  },
+  text: {
+    fontFamily: 'lexend',
+  },
+  button: {
+    // Adicione os estilos que você deseja para o botão aqui
+  },
+  buttonText: {
+    // Adicione os estilos que você deseja para o texto do botão aqui
+  },
+});
+

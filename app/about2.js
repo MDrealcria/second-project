@@ -1,5 +1,5 @@
 import { Text, ScrollView,StyleSheet, TouchableOpacity, View, Image } from "react-native";
-
+import {link} from "expo-router"
 export default function about2(){
     return(
         <view>

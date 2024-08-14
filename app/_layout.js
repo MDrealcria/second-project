@@ -16,7 +16,7 @@ export default function RootLayout() {
       headerTitleAlign: "center",
     }}>
       <Stack.Screen name="index"  options={{title: "coffe WP"}}/>
-      <Stack.Screen name="about2"  options={{title: "coffe WP"}}/>
+      <Stack.Screen name="about2"  options={{title: "About2"}}/>
 
     </Stack>
   );

@@ -79,10 +79,9 @@ export default function Index() {
         />
 
 <View style={{backgroundColor: "#fff", width: 390, height: 62, alignItems: "center", padding: 20, borderRadius: 12}}>
-<Link href="/about2" style={styles.button} asChild >
+<Link href="/about2" style={styles.button} asChild>
         <TouchableOpacity>
           <Text style={styles.buttonText}>COMEÇAR AGORA</Text>
-          <Image style={style.Image2}   source={require('../assets/images/image 1.png')}/>
         </TouchableOpacity>
       </Link>
       </View>
@@ -105,12 +104,7 @@ const styles = StyleSheet.create({
   image1: {
     width: 314,
     height: 85,
-    marginBottom: 30
-  },
-  Image2: {
-    width: 314,
-    height: 85,
-    marginBottom: 30
+    marginBottom: 25
   },
   text: {
     fontFamily: 'lexend',

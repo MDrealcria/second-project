@@ -2,7 +2,7 @@
 import React from 'react';
 import { Text, ScrollView, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { Link } from "expo-router";
-import list from '../produtos.js';
+// import list from '../produtos.js';
 
 export default function Products() {
     return (

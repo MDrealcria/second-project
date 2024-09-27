@@ -1,57 +1,25 @@
-// import { Text, ScrollView, StyleSheet, TouchableOpacity, View, Image } from "react-native";
-// import { link } from "expo-router"
-// export default function about2() {
-//     return (
-
-//         <view style={style.principal}>
-
-//          <view style={style.container}>
-//                 <text>Bem Vindo ao Nexus</text>
-//          </view>
-         
-//          <view style={style.mensage}>
-//                 <text>Bem vindo a bordo</text>
-//         </view>
-
-//         </view>
-//     );
-// }
-
-// const style = StyleSheet.create({
-//         principal:{
-//             backgroundColor:"#E4811E",
-//             flex: 1,
-//         },
-        
-//          container: {
-//          display: 'flex',
-//          backgroundColor: "#fff",
-//          width: "390",
-//          height: "62",
-//          borderRadius: 15,
-//          color: '000',
-//           justifyContent: "center", 
-//          },
-
-//          mensage:{
-//             backgroundColor: '#000',
-//             width: "100",
-//             height: "100",
-//             marginBottom: "10",
-//             justifyContent: "center"
-//          }
-// });
-import { Text, ScrollView, StyleSheet, TouchableOpacity, View, Image } from "react-native";
-import { link } from "expo-router";
+import { Text, StyleSheet, View } from "react-native";
 
 export default function About2() {
     return (
         <View style={styles.principal}>
             <View style={styles.container}>
-                <Text>Bem Vindo ao Nexus</Text>
+                <Text>Rotinas de treino</Text>
             </View>
             <View style={styles.mensage}>
-                <Text>Bem vindo a bordo</Text>
+                <Text>iniciante</Text>
+            </View>
+
+            <View style={styles.mensage1}>
+                <Text>Mediano</Text>
+            </View>
+
+            <View style={styles.mensage2}>
+                <Text>Dificil</Text>
+            </View>
+
+            <View style={styles.mensage3}>
+                <Text>Bonus</Text>
             </View>
         </View>
     );
@@ -59,26 +27,64 @@ export default function About2() {
 
 const styles = StyleSheet.create({
     principal: {
-        backgroundColor: "#E4811E",
+        backgroundColor: "#000",
         flex: 1,
-        padding: 16, // Adiciona um pouco de preenchimento se necessário
+        padding: 16, 
+        marginLeft: "15",
     },
     container: {
         backgroundColor: "#fff",
-        width: 390, // Em dispositivos com largura menor, você pode usar '100%' ou um valor fixo mais apropriado
+        width: '100%', // Ajusta a largura para preencher o contêiner pai
         height: 62,
         borderRadius: 15,
         justifyContent: "center",
-        alignItems: "center", // Alinhe o texto ao centro
-        marginBottom: 10, // Adiciona um espaço abaixo
+        alignItems: "center",
+        marginBottom: 35,
     },
     mensage: {
-        backgroundColor: '#000',
-        width: '100%', // Ajusta a largura para preencher o contêiner pai
+        backgroundColor: '#24E29A',
+        width: '100%',
         height: 100,
-        marginBottom: 10, // Ajusta o espaçamento inferior
+        marginBottom: 10,
         justifyContent: "center",
-        alignItems: "center", // Alinhe o texto ao centro
+        alignItems: "center",
+        borderRadius: 25,
+        alignItems: "flex-start",
+        marginTop: 15,
+    },
+    mensage1: {
+        backgroundColor: '#B721FE',
+        width: '100%',
+        height: 100,
+        marginBottom: 10,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 25,
+        alignItems: "flex-start",
+        marginTop: 15,
+    },
+    mensage2: {
+        backgroundColor: '#E70046',
+        width: '100%',
+        height: 100,
+        marginBottom: 10,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 25,
+        alignItems: "flex-start",
+        marginTop: 15,
+        marginRight: "150",
+    },
+    mensage3: {
+        backgroundColor: '#FCBA2E',
+        width: '100%',
+        height: 100,
+        marginBottom: 10,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 25,
+        alignItems: "flex-start",
+        marginTop: 15,
     }
 });
 

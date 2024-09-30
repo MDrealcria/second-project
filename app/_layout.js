@@ -6,8 +6,8 @@ export default function RootLayout() {
   return (
     <Stack screenOptions={{
       headerStyle:{
-        backgroundColor: "#703b10",
-        borderBottonWidth: 0,
+        backgroundColor: "#000",
+        // borderBottonWidth: 0,
       },
       headerTintColor: "#fff",
       headerTitleStyle:{
@@ -15,8 +15,9 @@ export default function RootLayout() {
       },
       headerTitleAlign: "center",
     }}>
-      <Stack.Screen name="index"  options={{title: "Nexus"}}/>
+     <Stack.Screen name="index" options={{ title: "Nexus", headerStyle:{backgroundColor: '#E4801E'}, }} />
       <Stack.Screen name="about2"  options={{title: "Nexus2"}}/>
+      {/* <Stack.Screen name="about2"  options={{title: "Nexus2"}}/> */}
 
     </Stack>
   );

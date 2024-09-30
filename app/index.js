@@ -6,7 +6,7 @@ import { Link } from 'expo-router'; // Se você está usando expo-router
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Index() {
-  
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -18,30 +18,61 @@ export default function Index() {
 
       <Text style={styles.text}></Text>
 
-      {/* <Link href="/about2" style={styles.buttonone} asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonOneText}>acesse ai</Text>
-        </Pressable>
-      </Link>
-    </View> */}
-  {/* );
-} */}
+    
+      <Image
+        style={styles.image1}
+        source={require('../assets/images/image 1.png')}
+      />
 
-<Image
-          style={styles.image1}
-          source={require('../assets/images/image 1.png')}
-        />
+    {/* botão de inicio */}
+      <View style={{ backgroundColor: "#fff", width: 390, height: 62, alignItems: "center", padding: 20, borderRadius: 12 }}>
+        
+        <Link href="/about2" style={styles.button} asChild>
 
-<View style={{backgroundColor: "#fff", width: 390, height: 62, alignItems: "center", padding: 20, borderRadius: 12}}>
-<Link href="/about2" style={styles.button} asChild>
-        <TouchableOpacity>
-          <Text style={styles.buttonText}>COMEÇAR AGORA</Text>
-        </TouchableOpacity>
-      </Link>
+          <TouchableOpacity>
+
+            <Text style={styles.buttonText}>COMEÇAR AGORA</Text>
+
+          </TouchableOpacity>
+        </Link>
+
       </View>
+
     </View>
+    
+
+    
+      // <View style={{ backgroundColor: "#fff", width: 390, height: 62, alignItems: "center", padding: 20, borderRadius: 12 }}>
+        
+      //   <Link href="/about3" style={styles.button} asChild>
+
+      //     <TouchableOpacity>
+
+      //       <Text style={styles.buttonText}>COMEÇAR AGORA</Text>
+
+      //     </TouchableOpacity>
+      //   </Link>
+
+      // </View>
+
+    
+    
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//configurações 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -65,11 +96,11 @@ const styles = StyleSheet.create({
   },
   button: {
     // Adicione os estilos que você deseja para o botão aqui
-    
+
   },
   buttonText: {
-  fontWeight : "bold",
-  
+    fontWeight: "bold",
+
     // Adicione os estilos que você deseja para o texto do botão aqui
   },
 });

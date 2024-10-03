@@ -42,20 +42,7 @@ export default function Index() {
     
 
     
-      // <View style={{ backgroundColor: "#fff", width: 390, height: 62, alignItems: "center", padding: 20, borderRadius: 12 }}>
-        
-      //   <Link href="/about3" style={styles.button} asChild>
-
-      //     <TouchableOpacity>
-
-      //       <Text style={styles.buttonText}>COMEÇAR AGORA</Text>
-
-      //     </TouchableOpacity>
-      //   </Link>
-
-      // </View>
-
-    
+     
     
   );
 }

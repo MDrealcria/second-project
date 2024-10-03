@@ -87,24 +87,28 @@
 //         // Certifique-se de que o container tenha display flex
 //         display: 'flex', // Isso é importante se ainda não estiver em um contexto flex
 //     }
-    
+
 // });
 
-
 import { Text, StyleSheet, View } from "react-native";
+import { Link } from 'expo-router';
 
 export default function About2() {
     return (
         <View style={styles.principal}>
             <View style={styles.container}>
                 <Text style={styles.text}>Rotinas de treino</Text>
+                source
             </View>
+
             <View style={styles.mensage}>
+                <Link href="/about3" style={styles.button} asChild>
                 <Text style={styles.text}>Iniciante</Text>
+                </Link>
             </View>
+
             <View style={styles.mensage1}>
                 <Text style={styles.text}>Mediano</Text>
-                
             </View>
             <View style={styles.mensage2}>
                 <Text style={styles.text}>Difícil</Text>
@@ -120,8 +124,10 @@ const styles = StyleSheet.create({
     principal: {
         backgroundColor: "#000",
         flex: 1,
-        padding: 16, 
-        marginLeft: 15, // Ajuste para número
+        padding: 16,
+        marginLeft: 15,
+        
+        
     },
     container: {
         backgroundColor: "#fff",
@@ -131,16 +137,18 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 35,
+        flexDirection: 'row',
     },
     mensage: {
         backgroundColor: '#24E29A',
         width: '100%',
         height: 100,
-        marginBottom: 10,
+        marginLeft: '20',
+        // marginBottom: 10,
         justifyContent: "center",
-        alignItems: "center", // Centraliza na horizontal
+        alignItems: "",
         borderRadius: 25,
-        marginTop: 15,
+        marginTop: 25,
     },
     mensage1: {
         backgroundColor: '#B721FE',
@@ -150,7 +158,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 25,
-        marginTop: 15,
+        marginTop: 30,
     },
     mensage2: {
         backgroundColor: '#E70046',
@@ -160,7 +168,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 25,
-        marginTop: 15,
+        marginTop: 25,
     },
     mensage3: {
         backgroundColor: '#FCBA2E',
@@ -170,11 +178,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 25,
-        marginTop: 15,
+        marginTop: 25,
     },
     text: {
-        textAlign: 'center', // Centraliza o texto
-        color: '#000', // Altere para a cor que preferir
-        fontSize: 18, // Ajuste o tamanho da fonte conforme necessário
-    }
+        textAlign: 'center',
+        color: '#000',
+        fontSize: 18,
+    },
+    button: {
+        // Adicione os estilos que você deseja para o botão aqui
+    },
 });

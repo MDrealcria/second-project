@@ -7,7 +7,7 @@ export default function RootLayout() {
     <Stack screenOptions={{
       headerStyle:{
         backgroundColor: "#000",
-        // borderBottonWidth: 0,
+        
       },
       headerTintColor: "#fff",
       headerTitleStyle:{
@@ -16,8 +16,8 @@ export default function RootLayout() {
       headerTitleAlign: "center",
     }}>
      <Stack.Screen name="index" options={{ title: "Nexus", headerStyle:{backgroundColor: '#E4801E'}, }} />
-      <Stack.Screen name="about2"  options={{title: "Nexus2"}}/>
-      {/* <Stack.Screen name="about2"  options={{title: "Nexus2"}}/> */}
+      {/* <Stack.Screen name="products"  options={{title: "Nexus2"}}/> */}
+      <Stack.Screen name="gymSingle/[id]"  options={{title: "Nexus2"}}/>
 
     </Stack>
   );

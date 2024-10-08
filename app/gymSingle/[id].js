@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Image, ScrollView } from 'react-native'
 import { useLocalSearchParams } from 'expo-router'
 import list from '../products.json'
 
-export default function coffeeSingle() {
+export default function gymSingle() {
     const { id } = useLocalSearchParams();
     const data = list.listProduct.find(
         (item) => item.id == id)

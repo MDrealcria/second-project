@@ -1,19 +1,21 @@
-import React from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
-import list from "./products.json";
+import { Text, ScrollView, View, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { Link } from "expo-router";
+import list from './products.json';
 
 export default function Products() {
+
     return (
         <ScrollView style={styles.container}>
-            <Text>
-                Product 1
+            <Text style={styles.title}>
+                Nossos cafés e Linguagens
             </Text>
+
             {list.listProduct.map((item) => (
 
                 <Link
                     key={item.id}
                     href={{
-                        pathname: "/GymSingle/[id]",
+                        pathname: "/gymSingle single/[id]",
                         params: { id: item.id }
                     }}>
                     <View style={styles.itemContainer}>
@@ -27,17 +29,43 @@ export default function Products() {
 
             ))
             }
-        </ ScrollView>
+
+        </ScrollView >
     );
 }
 
 const styles = StyleSheet.create({
-
+    title: {
+        textAlign: 'center', fontWeight: 'bold', marginBottom: 20, marginTop: 20,
+        color: '#fff', fontSize: 20
+    },
     container: {
-        display: 'flex',
-        width: '100%',
-        height: '100%',
-        justifyContente: 'center',
-        alignItems: 'center',
+        flex: 1,
+        padding: 20,
+        backgroundColor: '#260F0D',
+    },
+    itemContainer: {
+        flexDirection: 'row',
+        marginBottom: 20,
+        backgroundColor: '#F2D8C2',
+        borderRadius: 8,
+        padding: 10,
+    },
+    image: {
+        width: 100,
+        height: 100,
+        borderRadius: 8,
+    },
+    textContainer: {
+        flex: 1,
+        marginLeft: 10,
+    },
+    titleProduct: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    description: {
+        marginTop: 5,
+        fontSize: 14,
     },
 });
